@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Baseball Score App</string>
+    <string name="balls">Ball</string>
+    <string name="strikes">Strike</string>
+    <string name="out">Out</string>
+    <string name="guest">Guest</string>
+    <string name="home">Home</string>
+    <string name="r">R</string>
+    <string name="h">H</string>
+    <string name="e">E</string>
+    <string name="inning">Inning</string>
+</resources>

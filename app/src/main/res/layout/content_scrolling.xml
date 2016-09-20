@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_scrolling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.hq.baseballscore.MainActivity">
+
+    <!--Balls, strikes and outs-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        >
+
+        <!--tvBallsText-->
+        <TextView
+            android:id="@+id/tvBallsText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="@string/balls"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+        <!--tvBallsValue-->
+        <TextView
+            android:id="@+id/tvBallsValue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="64dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+
+        <!--tvStrikesText-->
+        <TextView
+            android:id="@+id/tvStrikesText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="@string/strikes"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+        <!--tvStrikesValue-->
+        <TextView
+            android:id="@+id/tvStrikesValue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="64dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+
+        <!--tvOutsText-->
+        <TextView
+            android:id="@+id/tvOutsText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="@string/out"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+        <!--tvOutsValue-->
+        <TextView
+            android:id="@+id/tvOutsValue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.166"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="64dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <!--Divisory line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"
+        android:background="@android:color/darker_gray"
+        >
+    </View>
+
+    <!--Score board with runs and innings-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <!--Score board innings Table layout goes here-->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            android:layout_weight=".7">
+
+            <!--Notation:-->
+            <!--0 Indexed-->
+            <!--Table0Row0Col0 = T1R0C0-->
+            <!--Table2Row3Col2 = T2R3C2-->
+
+            <!--Row0-->
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                >
+
+                <!--T0R0C0-->
+                <TextView
+                    android:text="@string/inning"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C1-->
+                <TextView
+                    android:text="1"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C2-->
+                <TextView
+                    android:text="2"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C3-->
+                <TextView
+                    android:text="3"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C4-->
+                <TextView
+                    android:text="4"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C5-->
+                <TextView
+                    android:text="5"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C6-->
+                <TextView
+                    android:text="6"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C7-->
+                <TextView
+                    android:text="7"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C8-->
+                <TextView
+                    android:text="8"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R0C9-->
+                <TextView
+                    android:text="9"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!--Row1-->
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                >
+
+                <!--T1R0C0-->
+                <TextView
+                    android:text="@string/guest"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R1C1-->
+                <TextView
+                    android:id="@+id/tvGuestInn1"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C2-->
+                <TextView
+                    android:id="@+id/tvGuestInn2"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C3-->
+                <TextView
+                    android:id="@+id/tvGuestInn3"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C4-->
+                <TextView
+                    android:id="@+id/tvGuestInn4"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C5-->
+                <TextView
+                    android:id="@+id/tvGuestInn5"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C6-->
+                <TextView
+                    android:id="@+id/tvGuestInn6"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C7-->
+                <TextView
+                    android:id="@+id/tvGuestInn7"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C8-->
+                <TextView
+                    android:id="@+id/tvGuestInn8"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R1C9-->
+                <TextView
+                    android:id="@+id/tvGuestInn9"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!--Row2-->
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                >
+
+                <!--T0R2C0-->
+                <TextView
+                    android:text="@string/home"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T0R2C1-->
+                <TextView
+                    android:id="@+id/tvHomeInn1"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C2-->
+                <TextView
+                    android:id="@+id/tvHomeInn2"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C3-->
+                <TextView
+                    android:id="@+id/tvHomeInn3"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C4-->
+                <TextView
+                    android:id="@+id/tvHomeInn4"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C5-->
+                <TextView
+                    android:id="@+id/tvHomeInn5"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C6-->
+                <TextView
+                    android:id="@+id/tvHomeInn6"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C7-->
+                <TextView
+                    android:id="@+id/tvHomeInn7"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C8-->
+                <TextView
+                    android:id="@+id/tvHomeInn8"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T0R2C9-->
+                <TextView
+                    android:id="@+id/tvHomeInn9"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@android:color/darker_gray"
+            >
+        </View>
+        <!--Score board runs, hits,.. Table layout goes here-->
+        <!--Dirty solution for borders is to set different background-->
+        <!--The stretchColumn attribute with * means stretch all columns-->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:stretchColumns="*"
+            >
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                >
+                <!--T1R0C0-->
+                <TextView
+                    android:text="@string/r"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T1R0C1-->
+                <TextView
+                    android:text="@string/h"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+
+                <!--T1R0C2-->
+                <TextView
+                    android:text="@string/e"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#4689C8"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!--Row2-->
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                >
+                <!--T1R1C0-->
+                <TextView
+                    android:id="@+id/tvGuestRuns"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T1R1C1-->
+                <TextView
+                    android:id="@+id/tvGuestHits"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T1R1C2-->
+                <TextView
+                    android:id="@+id/tvGuestErrors"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <!--Row3-->
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                >
+                <!--T1R2C0-->
+                <TextView
+                    android:id="@+id/tvHomeRuns"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T1R2C1-->
+                <TextView
+                    android:id="@+id/tvHomeHits"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!--T1R2C2-->
+                <TextView
+                    android:id="@+id/tvHomeErrors"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>
