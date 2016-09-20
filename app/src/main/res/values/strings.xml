@@ -9,4 +9,7 @@
     <string name="h">H</string>
     <string name="e">E</string>
     <string name="inning">Inning</string>
+    <string name="at_bat">Team at bat: </string>
+    <string name="reset">Reset</string>
+    <string name="help">*Touch numbers to update results</string>
 </resources>

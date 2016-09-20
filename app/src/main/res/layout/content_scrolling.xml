@@ -9,11 +9,49 @@
     android:orientation="vertical"
     tools:context="com.hq.baseballscore.MainActivity">
 
+    <!--Batting turn layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/at_bat"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTeamAtBat"
+            android:
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/guest"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--Divisory line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"
+        android:background="@android:color/darker_gray"
+        >
+    </View>
+
     <!--Balls, strikes and outs-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.4"
         android:orientation="horizontal"
         >
 
@@ -109,7 +147,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.4"
         android:orientation="horizontal">
 
         <!--Score board innings Table layout goes here-->
@@ -509,4 +547,41 @@
             </TableRow>
         </TableLayout>
     </LinearLayout>
+
+    <!--Divisory line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"
+        android:background="@android:color/darker_gray"
+        >
+    </View>
+
+    <!--Reset btn and help layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        >
+
+        <Button
+            android:id="@+id/btnReset"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/help"
+            android:textColor="#4689C8"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 </LinearLayout>
