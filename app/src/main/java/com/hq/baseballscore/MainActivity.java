@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -60,45 +61,47 @@ public class MainActivity extends AppCompatActivity {
 
     llInningStats = (LinearLayout) findViewById(R.id.llInningStats);
 
-    { // Set up Inning Stats
-      LinearLayout.LayoutParams llparamsInningStats = new LinearLayout.LayoutParams(0,
-              LinearLayout.LayoutParams.MATCH_PARENT, llInningsStatsWeight);
+    // Set up Inning Stats
+    int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources
+    ().getDisplayMetrics());
 
+    ViewGroup.LayoutParams llparamsInningStats = new ViewGroup.LayoutParams(width, ViewGroup
+            .LayoutParams.MATCH_PARENT);
+//            ViewGroup.LayoutParams llparamsInningStats = new ViewGroup.LayoutParams(width,
+//            LinearLayout.LayoutParams.MATCH_PARENT, llInningsStatsWeight);
 
-      for (int k=0; k < NumStats; k++) {
-        tvaInningsStats[k].setLayoutParams(llparamsInningStats);
-        tvaInningsStats[k+1].setLayoutParams(llparamsInningStats);
+    for (int k=0; k < NumStats; k++) {
+      tvaInningsStats[k].setLayoutParams(llparamsInningStats);
+//      tvaInningsStats[k+1].setLayoutParams(llparamsInningStats);
 
-        tvaInningsStats[k].setGravity(Gravity.CENTER);
-        tvaInningsStats[k+1].setGravity(Gravity.CENTER);
+      tvaInningsStats[k].setGravity(Gravity.CENTER);
+//      tvaInningsStats[k+1].setGravity(Gravity.CENTER);
 
-        tvaInningsStats[k].setText(sInningStatsNames[k]);
-        tvaInningsStats[k+1].setText("0");
-        tvaInningsStats[k+1].setTextSize(TypedValue.COMPLEX_UNIT_DIP, InningTextSize);
+      tvaInningsStats[k].setText(sInningStatsNames[k]);
+//      tvaInningsStats[k+1].setText("0");
+//      tvaInningsStats[k+1].setTextSize(TypedValue.COMPLEX_UNIT_DIP, InningTextSize);
 
-        tvaInningsStats[k].setTextColor(Color.CYAN);
-        tvaInningsStats[k+1].setTextColor(Color.BLACK);
+      tvaInningsStats[k].setTextColor(Color.CYAN);
+//      tvaInningsStats[k+1].setTextColor(Color.BLACK);
 
-        if (Build.VERSION.SDK_INT < 23) {
-          tvaInningsStats[k].setTextAppearance(this, android.R.style
-                  .TextAppearance_Large);
-          tvaInningsStats[k+1].setTextAppearance(this, android.R.style
-                  .TextAppearance_Large);
-        }
-        else {
-          tvaInningsStats[k].setTextAppearance(android.R.style
-                  .TextAppearance_DeviceDefault_Large);
-          tvaInningsStats[k+1].setTextAppearance(android.R.style
-                  .TextAppearance_DeviceDefault_Large);
-        }
-
-        tvaInningsStats[k].setTypeface(Typeface.DEFAULT_BOLD);
-        tvaInningsStats[k+1].setTypeface(Typeface.DEFAULT_BOLD);
-
-        llInningStats.addView(tvaInningsStats[k]);
-        llInningStats.addView(tvaInningsStats[k+1]);
-
+      if (Build.VERSION.SDK_INT < 23) {
+        tvaInningsStats[k].setTextAppearance(this, android.R.style
+                .TextAppearance_Large);
+//        tvaInningsStats[k+1].setTextAppearance(this, android.R.style
+//                .TextAppearance_Large);
       }
+      else {
+        tvaInningsStats[k].setTextAppearance(android.R.style
+                .TextAppearance_DeviceDefault_Large);
+//        tvaInningsStats[k+1].setTextAppearance(android.R.style
+//                .TextAppearance_DeviceDefault_Large);
+      }
+
+      tvaInningsStats[k].setTypeface(Typeface.DEFAULT_BOLD);
+//      tvaInningsStats[k+1].setTypeface(Typeface.DEFAULT_BOLD);
+
+      llInningStats.addView(tvaInningsStats[k]);
+//      llInningStats.addView(tvaInningsStats[k+1]);
     }
   }
 
