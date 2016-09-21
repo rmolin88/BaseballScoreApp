@@ -27,7 +27,6 @@
 
         <TextView
             android:id="@+id/tvTeamAtBat"
-            android:
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -445,6 +444,7 @@
             android:stretchColumns="*"
             >
 
+            <!--Row1-->
             <TableRow
                 android:layout_height="0dp"
                 android:layout_weight=".33"
