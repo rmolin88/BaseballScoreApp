@@ -48,6 +48,7 @@
 
     <!--Balls, strikes and outs-->
     <LinearLayout
+        android:id="@+id/llInningStats"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -55,82 +56,82 @@
         >
 
         <!--tvBallsText-->
-        <TextView
-            android:id="@+id/tvBallsText"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="@string/balls"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#4689C8"
-            android:textStyle="bold" />
+        <!--<TextView-->
+        <!--android:id="@+id/tvBallsText"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0.166"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/balls"-->
+        <!--android:textAppearance="?android:textAppearanceLarge"-->
+        <!--android:textColor="#4689C8"-->
+        <!--android:textStyle="bold" />-->
 
         <!--tvBallsValue-->
-        <TextView
-            android:id="@+id/tvBallsValue"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="0"
-            android:textSize="64dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            />
+        <!-- <TextView -->
+        <!-- android:id="@+id/tvBallsValue" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="0.166" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="0" -->
+        <!-- android:textSize="64dp" -->
+        <!-- android:textAppearance="?android:textAppearanceLarge" -->
+        <!-- android:textColor="#000000" -->
+        <!-- android:textStyle="bold" -->
+        <!-- /> -->
 
-        <!--tvStrikesText-->
-        <TextView
-            android:id="@+id/tvStrikesText"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="@string/strikes"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#4689C8"
-            android:textStyle="bold" />
+        <!--tvStrikesText -->
+        <!-- <TextView -->
+        <!-- android:id="@+id/tvStrikesText" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="0.166" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="@string/strikes" -->
+        <!-- android:textAppearance="?android:textAppearanceLarge" -->
+        <!-- android:textColor="#4689C8" -->
+        <!-- android:textStyle="bold" /> -->
 
-        <!--tvStrikesValue-->
-        <TextView
-            android:id="@+id/tvStrikesValue"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="0"
-            android:textSize="64dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            />
+        <!--tvStrikesValue -->
+        <!-- <TextView -->
+        <!-- android:id="@+id/tvStrikesValue" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="0.166" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="0" -->
+        <!-- android:textSize="64dp" -->
+        <!-- android:textAppearance="?android:textAppearanceLarge" -->
+        <!-- android:textColor="#000000" -->
+        <!-- android:textStyle="bold" -->
+        <!-- /> -->
 
         <!--tvOutsText-->
-        <TextView
-            android:id="@+id/tvOutsText"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="@string/out"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#4689C8"
-            android:textStyle="bold" />
+        <!--<TextView-->
+        <!--android:id="@+id/tvOutsText"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0.166"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/out"-->
+        <!--android:textAppearance="?android:textAppearanceLarge"-->
+        <!--android:textColor="#4689C8"-->
+        <!--android:textStyle="bold" />-->
 
         <!--tvOutsValue-->
-        <TextView
-            android:id="@+id/tvOutsValue"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.166"
-            android:gravity="center"
-            android:text="0"
-            android:textSize="64dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            />
+        <!--<TextView-->
+        <!--android:id="@+id/tvOutsValue"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0.166"-->
+        <!--android:gravity="center"-->
+        <!--android:text="0"-->
+        <!--android:textSize="64dp"-->
+        <!--android:textAppearance="?android:textAppearanceLarge"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textStyle="bold"-->
+        <!--/>-->
     </LinearLayout>
 
     <!--Divisory line-->
