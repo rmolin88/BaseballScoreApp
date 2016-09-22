@@ -21,3 +21,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// task appStart(type: Exec, dependsOn: [assembleDebug, installDebug]) {
+    // // linux 
+    // commandLine 'adb', 'shell', 'am', 'start', '-n', 'com.hq/.MyActivity'
+
+    // // windows
+    // // commandLine 'cmd', '/c', 'adb', 'shell', 'am', 'start', '-n', 'com.example/.MyActivity'      
+// }

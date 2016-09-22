@@ -1,6 +1,5 @@
 package com.hq.baseballscore;
 
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -12,15 +11,17 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
   private static final String TAG = "BaseballScoreApp";
   private static final int NumInnings = 9;
-  private static final int NumStats = 3;
+  private static final int NumStats = 6;
   private static final int InningTextSize = 64;
   private static final String[] sInningStatsNames = {"Ball", "Strike", "Out"};
+  private static final float llInningsStatsWeight = (float) 0.16;
 
   private static int[] iaGuestInningStats = new int[NumStats];
   private static int[] iaHomeInningStats = new int[NumStats];
@@ -31,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
   private static int[] iaGuestInningRuns = new int[NumInnings];
   private static int[] iaHomeInningRuns = new int[NumInnings];
 
-  private static final float llInningsStatsWeight = 10/6;
   private LinearLayout llInningStats;
-  private TextView[] tvaInningsStats = new TextView[NumStats*2];
+  private TextView[] tvaInningsStats = new TextView[NumStats];
 
   private TextView[] tvaGuestGameStats = new TextView[NumInnings];
   private TextView[] tvaHomeGameStats = new TextView[NumInnings];
@@ -61,47 +61,33 @@ public class MainActivity extends AppCompatActivity {
 
     llInningStats = (LinearLayout) findViewById(R.id.llInningStats);
 
-    // Set up Inning Stats
-    int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources
-    ().getDisplayMetrics());
+    for (int k = 0, k1 = 0; k < NumStats; k++) {
+      tvaInningsStats[k] = new TextView(this);
 
-    ViewGroup.LayoutParams llparamsInningStats = new ViewGroup.LayoutParams(width, ViewGroup
-            .LayoutParams.MATCH_PARENT);
-//            ViewGroup.LayoutParams llparamsInningStats = new ViewGroup.LayoutParams(width,
-//            LinearLayout.LayoutParams.MATCH_PARENT, llInningsStatsWeight);
-
-    for (int k=0; k < NumStats; k++) {
-      tvaInningsStats[k].setLayoutParams(llparamsInningStats);
-//      tvaInningsStats[k+1].setLayoutParams(llparamsInningStats);
-
+      // Even are words: balls, str....
+      tvaInningsStats[k].setId(k);
+      tvaInningsStats[k]
+          .setLayoutParams(
+              new LinearLayout.LayoutParams(
+                  0, LinearLayout.LayoutParams.MATCH_PARENT, llInningsStatsWeight));
       tvaInningsStats[k].setGravity(Gravity.CENTER);
-//      tvaInningsStats[k+1].setGravity(Gravity.CENTER);
-
-      tvaInningsStats[k].setText(sInningStatsNames[k]);
-//      tvaInningsStats[k+1].setText("0");
-//      tvaInningsStats[k+1].setTextSize(TypedValue.COMPLEX_UNIT_DIP, InningTextSize);
-
-      tvaInningsStats[k].setTextColor(Color.CYAN);
-//      tvaInningsStats[k+1].setTextColor(Color.BLACK);
-
       if (Build.VERSION.SDK_INT < 23) {
-        tvaInningsStats[k].setTextAppearance(this, android.R.style
-                .TextAppearance_Large);
-//        tvaInningsStats[k+1].setTextAppearance(this, android.R.style
-//                .TextAppearance_Large);
-      }
-      else {
-        tvaInningsStats[k].setTextAppearance(android.R.style
-                .TextAppearance_DeviceDefault_Large);
-//        tvaInningsStats[k+1].setTextAppearance(android.R.style
-//                .TextAppearance_DeviceDefault_Large);
+        tvaInningsStats[k].setTextAppearance(this, android.R.style.TextAppearance_Large);
+      } else {
+        tvaInningsStats[k].setTextAppearance(android.R.style.TextAppearance_DeviceDefault_Large);
       }
 
-      tvaInningsStats[k].setTypeface(Typeface.DEFAULT_BOLD);
-//      tvaInningsStats[k+1].setTypeface(Typeface.DEFAULT_BOLD);
+      if ((k & 1) == 1) { // Odd are values
+        tvaInningsStats[k].setText("0");
+        tvaInningsStats[k].setTextSize(TypedValue.COMPLEX_UNIT_DIP, InningTextSize);
+        tvaInningsStats[k].setTextColor(Color.BLACK);
+      } else {
+        tvaInningsStats[k].setText(sInningStatsNames[k1++]);
+        tvaInningsStats[k].setTypeface(Typeface.DEFAULT_BOLD);
+        tvaInningsStats[k].setTextColor(Color.CYAN);
+      }
 
       llInningStats.addView(tvaInningsStats[k]);
-//      llInningStats.addView(tvaInningsStats[k+1]);
     }
   }
 
