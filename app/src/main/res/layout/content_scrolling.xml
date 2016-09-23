@@ -350,6 +350,7 @@
             </TableRow>
         </TableLayout>
 
+        <!-- Horizontal Divisory line -->
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -400,37 +401,38 @@
 
             <!--Row2-->
             <TableRow
+                android:id="@+id/trTable1Row1"
                 android:layout_height="0dp"
                 android:layout_weight=".33"
                 android:gravity="center"
                 android:layout_margin="1dp"
                 >
                 <!--T1R1C0-->
-                <TextView
-                    android:id="@+id/tvGuestRuns"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestRuns" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T1R1C1-->
-                <TextView
-                    android:id="@+id/tvGuestHits"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestHits" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T1R1C2-->
-                <TextView
-                    android:id="@+id/tvGuestErrors"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestErrors" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
             </TableRow>
 
