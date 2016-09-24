@@ -174,6 +174,7 @@
 
             <!--Row1-->
             <TableRow
+                android:id="@+id/trTable0Row1"
                 android:layout_height="0dp"
                 android:layout_weight=".33"
                 android:gravity="center"
@@ -188,81 +189,82 @@
                     android:textStyle="bold" />
 
                 <!--T0R1C1-->
-                <TextView
-                    android:id="@+id/tvGuestInn1"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn1" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C2-->
-                <TextView
-                    android:id="@+id/tvGuestInn2"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn2" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C3-->
-                <TextView
-                    android:id="@+id/tvGuestInn3"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn3" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C4-->
-                <TextView
-                    android:id="@+id/tvGuestInn4"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn4" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C5-->
-                <TextView
-                    android:id="@+id/tvGuestInn5"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn5" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C6-->
-                <TextView
-                    android:id="@+id/tvGuestInn6"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn6" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C7-->
-                <TextView
-                    android:id="@+id/tvGuestInn7"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn7" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C8-->
-                <TextView
-                    android:id="@+id/tvGuestInn8"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn8" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R1C9-->
-                <TextView
-                    android:id="@+id/tvGuestInn9"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvGuestInn9" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
             </TableRow>
 
             <!--Row2-->
             <TableRow
+              android:id="@+id/trTable0Row2"
                 android:layout_height="0dp"
                 android:layout_weight=".33"
                 android:gravity="center"
@@ -277,76 +279,76 @@
                     android:textStyle="bold" />
 
                 <!--T0R2C1-->
-                <TextView
-                    android:id="@+id/tvHomeInn1"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn1" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C2-->
-                <TextView
-                    android:id="@+id/tvHomeInn2"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn2" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C3-->
-                <TextView
-                    android:id="@+id/tvHomeInn3"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn3" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C4-->
-                <TextView
-                    android:id="@+id/tvHomeInn4"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn4" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C5-->
-                <TextView
-                    android:id="@+id/tvHomeInn5"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn5" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C6-->
-                <TextView
-                    android:id="@+id/tvHomeInn6"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn6" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C7-->
-                <TextView
-                    android:id="@+id/tvHomeInn7"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn7" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C8-->
-                <TextView
-                    android:id="@+id/tvHomeInn8"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn8" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T0R2C9-->
-                <TextView
-                    android:id="@+id/tvHomeInn9"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeInn9" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
             </TableRow>
         </TableLayout>
 
@@ -438,37 +440,38 @@
 
             <!--Row3-->
             <TableRow
+                android:id="@+id/trTable1Row2"
                 android:layout_height="0dp"
                 android:layout_weight=".33"
                 android:gravity="center"
                 android:layout_margin="1dp"
                 >
                 <!--T1R2C0-->
-                <TextView
-                    android:id="@+id/tvHomeRuns"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeRuns" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T1R2C1-->
-                <TextView
-                    android:id="@+id/tvHomeHits"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeHits" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
 
                 <!--T1R2C2-->
-                <TextView
-                    android:id="@+id/tvHomeErrors"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                <!-- <TextView -->
+                    <!-- android:id="@+id/tvHomeErrors" -->
+                    <!-- android:text="0" -->
+                    <!-- android:gravity="center" -->
+                    <!-- android:textAppearance="?android:textAppearanceLarge" -->
+                    <!-- android:textColor="#000000" -->
+                    <!-- android:textStyle="bold" /> -->
             </TableRow>
         </TableLayout>
     </LinearLayout>
