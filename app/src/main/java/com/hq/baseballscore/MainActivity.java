@@ -14,27 +14,36 @@ import android.widget.LinearLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import static com.hq.baseballscore.AppGlobals.COLOR_BLUE;
+import static com.hq.baseballscore.AppGlobals.INN_STATS_NAMES;
+import static com.hq.baseballscore.AppGlobals.INN_TEXT_SIZE;
+import static com.hq.baseballscore.AppGlobals.NUM_GAME_STATS;
+import static com.hq.baseballscore.AppGlobals.NUM_INNINGS;
+import static com.hq.baseballscore.AppGlobals.NUM_STATS;
+
+
 public class MainActivity extends AppCompatActivity {
-  private static final String TAG = "BaseballScoreApp";
-  private static final int NUM_INNINGS = 9;
-  private static final int NUM_STATS = 6;
-  private static final int NUM_GAME_STATS = 3;
-  private static final String COLOR_BLUE = "#4689C8";
-  private static final int INN_TEXT_SIZE = 64;
-  private static final String[] INN_STATS_NAMES = {"Ball", "Strike", "Out"};
+
+  // tvaInningsStats array index
+  private static final int INDEX_BALLS = 1;
+  private static final int INDEX_STRIKES = 3;
+  private static final int INDEX_OUTS = 5;
+
+  // tvaHome/GuestGameStats array index
+  private static final int INDEX_RUNS = 0;
+  private static final int INDEX_HITS = 1;
+  private static final int INDEX_ERRORS = 2;
 
   private static final float llInningsStatsWeight = (float) 1 / 6;
+  // private static int iBalls = 0;
+  // private static int iStrikes = 0;
+  // private static int iOuts = 0;
 
-  private static int iBalls = 0;
-  private static int iStrikes = 0;
-  private static int iOuts = 0;
-
-  private static int[] iaGuestInningStats = new int[NUM_STATS];
-  private static int[] iaHomeInningStats = new int[NUM_STATS];
-
+  // Runs, Hits, Errors
   private static int[] iaGuestGameStats = new int[NUM_STATS];
   private static int[] iaHomeGameStats = new int[NUM_STATS];
 
+  // Each inning num. of runs
   private static int[] iaGuestInningRuns = new int[NUM_INNINGS];
   private static int[] iaHomeInningRuns = new int[NUM_INNINGS];
 
@@ -46,20 +55,6 @@ public class MainActivity extends AppCompatActivity {
   private TextView[] tvaGuestInningsRuns = new TextView[NUM_INNINGS];
   private TextView[] tvaHomeInningsRuns = new TextView[NUM_INNINGS];
 
-  private class CustomTouchListener implements View.OnTouchListener {
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-      if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-        // TODO Convert this down here to a function that decodes who got called
-        if (view.getId() == tvaInningsStats[1].getId()) {
-          Log.i(TAG, view.getId() + " - Button Pressed!");
-          iBalls++;
-          tvaInningsStats[1].setText("" + iBalls);
-        }
-      }
-      return false;
-    }
-  }
-
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.content_scrolling);
@@ -69,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
     TableRow trTable1Row2 = (TableRow) findViewById(R.id.trTable1Row2);
     TableRow trTable0Row1 = (TableRow) findViewById(R.id.trTable0Row1);
     TableRow trTable0Row2 = (TableRow) findViewById(R.id.trTable0Row2);
+
+//    View.OnTouchListener otlBalls = new BallsTouchListener();
+    //    View.OnTouchListener otlStrikes = new StrikesTouchListener();
+//    View.OnTouchListener otlOuts = new OutsTouchListener();
 
     for (int
             k = 0, k1 = 0, k2 = NUM_INNINGS, k3 = NUM_INNINGS * 2, k4 = NUM_INNINGS * 3, k5 =
@@ -96,7 +95,11 @@ public class MainActivity extends AppCompatActivity {
           tvaInningsStats[k].setText("0");
           tvaInningsStats[k].setTextSize(TypedValue.COMPLEX_UNIT_DIP, INN_TEXT_SIZE);
           tvaInningsStats[k].setTextColor(Color.BLACK);
-          tvaInningsStats[k].setOnTouchListener(new CustomTouchListener());
+//          if (k == INDEX_BALLS) tvaInningsStats[k].setOnTouchListener(new BallsTouchListener());
+          // Todo fix TouchListener here when you create the strikes and outs
+//          else if (k == INDEX_STRIKES)
+//            tvaInningsStats[k].setOnTouchListener(new StrikesTouchListener(tvaInningsStats[k]));
+//          else tvaInningsStats[k].setOnTouchListener(new OutsTouchListener());
         } else {
           tvaInningsStats[k].setText(INN_STATS_NAMES[k1++]);
           tvaInningsStats[k].setTypeface(Typeface.DEFAULT_BOLD);
@@ -176,4 +179,5 @@ public class MainActivity extends AppCompatActivity {
   // TODO: Crazy idea Change Guest and Home team names on touch
   // TODO: Give some color to the layout
   // TODO: Help menu
+  //
 }
