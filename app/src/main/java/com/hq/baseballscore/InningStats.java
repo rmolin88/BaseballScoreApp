@@ -3,24 +3,16 @@ package com.hq.baseballscore;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 /**
  * Created by Reinaldo on Sun 25 Sep 2016 06:35:43 PM EDT
  */
-public class InningStats {
-	// Note: The idea here is to have a custom TextView class.
-	// And that class will have and update function which will update the value of
-	// its text. and do all the pertinent calculations before hand
-	// TODO get the views to show
+class InningStats {
 	private static final int NUM_ELEMENTS = 6;
 	private static final int NUM_VALUES = 3;
 	private static final String[] STATS_NAMES = {"Ball", "Strike", "Out"};
@@ -36,6 +28,8 @@ public class InningStats {
 	private TextView tvBalls;
 	private TextView tvStrikes;
 	private TextView tvOuts;
+
+	private TextView tvTeamAtBat;
 
 	// Constructor which initializes all the views
 	InningStats(Context context, Activity activity) {
@@ -84,6 +78,8 @@ public class InningStats {
 
 			llInningStats.addView(tv);
 		}
+
+		tvTeamAtBat = (TextView) activity.findViewById(R.id.tvTeamAtBat);
 	}
 
 	private class BallsTouchListener implements View.OnTouchListener {
@@ -141,15 +137,24 @@ public class InningStats {
 	}
 
 	private void Reset() {
-		// TODO: Calls this to reset and display all zeros
 		iBalls = iStrikes = iOuts = 0;
 		UpdateDisplay();
+		tvTeamAtBat.setText(R.string.guest);
 	}
 
 	private void UpdateDisplay() {
 		tvBalls.setText(Integer.toString(iBalls));
 		tvStrikes.setText(Integer.toString(iStrikes));
 		tvOuts.setText(Integer.toString(iOuts));
+	}
+
+	private void SwitchTeamAtBat(){
+		// TODO fix getString and check this logic
+		if (tvTeamAtBat.getText() == getString(R.string.guest)){
+			tvTeamAtBat.setText(R.string.home);
+		}
+		else
+			tvTeamAtBat.setText(R.string.guest);
 	}
 }
 
