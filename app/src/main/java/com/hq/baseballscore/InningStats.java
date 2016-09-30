@@ -80,7 +80,7 @@ class CurrInnStats {
       llInningStats.addView(tv);
     }
 
-    tvTeamAtBat = (TextView) activity.findViewById(R.id.tvTeamAtBat);
+  tvTeamAtBat = (TextView) activity.findViewById(R.id.tvTeamAtBat);
   }
 
   private class CustomTouchListener implements View.OnTouchListener {
@@ -120,6 +120,7 @@ class CurrInnStats {
     if (tvTeamAtBat.getText() == activity.getString(R.string.guest)) {
       tvTeamAtBat.setText(R.string.home);
     } else tvTeamAtBat.setText(R.string.guest);
+		// TODO: Notify InningStats that needs to update innings
   }
 }
 

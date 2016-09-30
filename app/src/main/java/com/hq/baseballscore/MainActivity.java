@@ -6,14 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 	private CurrInnStats currInnStats;
-	private GameStats gameStats;
+	private GameStatsWrapper gameStats;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.content_scrolling);
 
 		currInnStats = new CurrInnStats(this, this);
-		gameStats = new GameStats(this, this);
+		gameStats = new GameStatsWrapper(this, this);
 	}
 
 	// TODO: Crazy idea Change Guest and Home team names on touch
