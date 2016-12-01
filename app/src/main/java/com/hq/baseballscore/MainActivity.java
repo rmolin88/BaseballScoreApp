@@ -1,12 +1,25 @@
 package com.hq.baseballscore;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
 	private CurrInnStats currInnStats;
 	private InningStats inningStats;
+	private Context context;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -15,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 		currInnStats = new CurrInnStats();
 		inningStats = new InningStats();
 	}
-
 
 	// Note: Always set Reset value
 	private class GenTextView extends TextView {
@@ -65,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 		private static final String TAG = "BaseballApp";
 		private static final int NUM_ELEMENTS = 6;
 		private static final int NUM_VALUES = 3;
-		private static final String[] STATS_NAMES = {"Ball", "Strike", "Out"};
+		// private static final String[] STATS_NAMES = {"Ball", "Strike", "Out"};
 		private static final int INDEX_BALLS = 1;
 		private static final int INDEX_STRIKES = 3;
 		private static final int INDEX_OUTS = 5;
